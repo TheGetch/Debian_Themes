@@ -8,8 +8,8 @@ fi
 echo '########################### apt update'
 apt update
 
-echo '########################### Installing gtk2-egines-murrine'
-apt install gtk2-egines-murrine
+echo '########################### Installing gtk2-engines-murrine'
+apt install gtk2-engines-murrine
 
 echo '########################### Installing lightdm-gtk-greeter-settings'
 apt install lightdm-gtk-greeter-settings
