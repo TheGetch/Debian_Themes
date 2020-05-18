@@ -16,30 +16,30 @@ apt install lightdm-gtk-greeter-settings
 
 echo '########################### Installing Material-Black-Plum_1.8.1'
 cd /usr/share/themes/
-wget https://github.com/TheGetch/Debian_Themes/blob/master/Material-Black-Plum_1.8.1.zip
+wget https://github.com/TheGetch/Debian_Themes/raw/master/Material-Black-Plum_1.8.1.zip
 unzip Material-Black-Plum_1.8.1.zip
 rm Material-Black-Plum_1.8.1.zip
 
 echo '########################### Installing MB-Plum-Suru-GLOW'
 cd /usr/share/icons/
-wget https://github.com/TheGetch/Debian_Themes/blob/master/MB-Plum-Suru-GLOW_1.8.1.zip
+wget https://github.com/TheGetch/Debian_Themes/raw/master/MB-Plum-Suru-GLOW_1.8.1.zip
 unzip MB-Plum-Suru-GLOW_1.8.1.zip
 rm MB-Plum-Suru-GLOW_1.8.1.zip
 
 echo '########################### Downloading Background'
 cd /usr/share/backgrounds/
-wget https://github.com/TheGetch/Debian_Themes/blob/master/journey-wallpaper-blue.png
+wget https://github.com/TheGetch/Debian_Themes/raw/master/journey-wallpaper-blue.png
 
 echo '########################### Updating icon cache'
 gtk-update-icon-cache /usr/share/icons/MB-Plum-Suru-GLOW/
 
-echo '########################### Setting Theme'
+echo '########################### Setting Theme: This needs to be run as non-root/sudo'
 xfconf-query -c xsettings -p /Net/ThemeName -s "Material-Black-Plum"
 
-echo '########################### Setting Icons'
+echo '########################### Setting Icons: This needs to be run as non-root/sudo'
 xfconf-query -c xsettings -p /Net/IconThemeName -s "MB-Plum-Suru-GLOW"
 
 echo '########################### Launching Greeter Settings'
 lightdm-gtk-greeter-settings
 
-echo '########################### Finished! Dont forget to change the background! (/usr/share/backgrounds/journey-wallpaper-blue.png) '
+echo '########################### Finished! Dont forget to manually change the background! (/usr/share/backgrounds/journey-wallpaper-blue.png) and to change the window's style in Window Manager'
